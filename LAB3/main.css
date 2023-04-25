@@ -1,0 +1,199 @@
+html {
+    max-width: 1020px;
+    margin: 10px 15px;
+}
+
+.main_title {
+    font-size: 35px;
+    position: relative;
+    animation-name: movingTitle;
+    animation-duration: 2s;
+}
+
+@keyframes movingTitle
+{
+    0% {left: 1050px;}
+    100% {left: 1px;}
+}
+
+
+nav > a {
+    text-decoration: none;
+    margin: 5px 5px;
+}
+
+.red-underline {
+    text-decoration: overline underline;
+    text-decoration-color: rgb(217, 131, 146);
+}
+
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.item_part {
+    width: 100%;
+}
+
+.item_border {
+    display: flex;
+    border: 1px solid black;
+    padding: 25px;
+    margin: 10px;
+}
+
+.container {
+    position: relative;
+}
+
+.textbox {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    background-color: black;
+}
+.container:hover .textbox {
+    display: block;
+    opacity: 0.7;
+}
+.container:hover .text {
+    opacity: 1;
+}
+
+.text {
+    font-size: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-align: center;
+}
+
+img {
+    transition: transform 2s;
+}
+.container:hover {
+    transform: scale(2, 2);
+}
+
+.intro {
+    margin: 8px;
+}
+
+.intro_content { 
+    padding-top: 18px;
+}
+
+/* signup */
+.title {
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+header > a, header > p {
+    color: black;
+    text-decoration: none;
+    display: inline;
+}
+
+.border-set {
+    border: 2px solid black
+}
+
+label {
+    display: block;
+}
+
+/* login */
+.red-btn {
+    background-color: #e85f32;
+    padding: 6px 35px;
+    height: 50px;
+    width: 20%;
+}
+
+.blue-btn {
+    background-color: #9ecccd;
+    padding: 6px 35px;
+    height: 50px;
+    width: 20%;
+
+}
+
+/* 미디어 적용 */
+@media (max-width: 480px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .four_borders {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    .four_borders {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item_border {
+        width: 42%
+    }
+}
+
+/* 미디어 적용 */
+@media (min-width: 801px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    
+    .four_borders {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .item_border {
+        width: 22%
+    }
+    .intro_content {
+        column-count: 2;
+        column-gap: 30px;
+        column-rule: 1px outset black;
+    }
+    }
