@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISH Market</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <h1 class="main_title">!~! Welcome to WISH Market !~!</h1>
+    <nav>
+        <a href="index.html" class="red-underline">메인페이지</a>
+        <a href="login.html">로그인</a>
+        <a href="signup.html">회원가입</a>
+    </nav>
+    <hr>
+    <br>
+    <h3>아이템 보기</h3>
+    <hr>
+    <div>
+        <aside>
+            <form>
+                <div>
+                    <label for="category" class="menu_explain">Choose a category:</label>
+                    <select id="category">
+                        <option value="all" selected>All</option>
+                        <option value="top">top</option>
+                        <option value="acc">acc</option>
+                        <option value="bag">bag</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="searchTerm" class="menu_explain">Enter search term:</label>
+                    <input type="text" id="searchTerm" placeholder="e.g. top">
+                </div>
+                <div>
+                    <label for="sort" class="menu_explain">Choose a sort</label>
+                    <select id="sort">
+                        <option value="name" selected>name</option>
+                        <option value="up">up</option>
+                    </select>
+                </div>
+                <div>
+                    <button>Filter results</button>
+                </div>
+            </form>
+        </aside>
+        <main>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

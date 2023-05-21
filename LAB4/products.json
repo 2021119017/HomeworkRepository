@@ -1,0 +1,62 @@
+[
+{
+    "name": "string top",
+    "price": 23000,
+    "image": "string_top.jpg",
+    "type": "top"
+},
+{
+    "name": "adidas top",
+    "price": 40900,
+    "image": "adidas_top.jpg",
+    "type": "top"
+},
+{
+    "name": "unique top",
+    "price": 32000,
+    "image": "unique_top.jpg",
+    "type": "top"
+},
+{
+    "name": "acc: zain ring",
+    "price": 15000,
+    "image": "zain_ring.jpg",
+    "type": "acc"
+},
+{
+    "name": "acc: hair clip",
+    "price": 6600,
+    "image": "hair_clip.jpg",
+    "type": "acc"
+},
+{
+    "name": "acc: dot scarf",
+    "price": 19000,
+    "image": "dot_scarf.jpg",
+    "type": "acc"
+},
+{
+    "name": "puff bag",
+    "price": 168000,
+    "image": "puff_bag.jpg",
+    "type": "bag"
+},
+{
+    "name": "denim bag",
+    "price": 99500,
+    "image": "denim_bag.jpg",
+    "type": "bag"
+},
+{
+    "name": "telfar bag",
+    "price": 177000,
+    "image": "telfar_bag.jpg",
+    "type": "bag"
+},
+{
+    "name": "sporty bag",
+    "price": 139200,
+    "image": "sporty_bag.jpg",
+    "type": "bag"  
+}
+]
