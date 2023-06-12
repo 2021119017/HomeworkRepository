@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISH Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+
+</head>
+
+<body>
+    <h1 class="title">!~! Welcome to WISH Market !~!</h1>
+    <nav>
+        <a href="/" class="red-underline">메인페이지</a>
+        <a href="/login"  >로그인</a>
+        <a href="/signup">회원가입</a>
+    </nav>
+    <hr>
+    <br>
+    <h3>아이템 보기</h3>
+    <hr>
+    <div>
+        <aside>
+            <form action="/filter" method="POST">
+                <div>
+                    <label for="category" class="menu_explain">Choose a category:</label>
+                    <select id="category" name="category">
+                        <option value="all" <%= category == 'all' ? 'selected' : '' %>>All</option>
+                        <option value="top" <%= category == 'top' ? 'selected' : '' %>>top</option>
+                        <option value="acc" <%= category == 'acc' ? 'selected' : '' %>>acc</option>
+                        <option value="bag" <%= category == 'bag' ? 'selected' : '' %>>bag</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="searchTerm" class="menu_explain">Enter search term:</label>
+                    <input type="text" id="searchTerm" name="searchTerm" value="<%= searchTerm %>" placeholder="e.g. top">
+                </div>
+                <div>
+                    <button type="submit">Filter results</button>
+                </div>
+            </form>
+        </aside>
+        <main>
+            
+            <% products.forEach(product => { %>
+            <section>
+                <a href="/product/<%= product.product_id %>">
+                    <img class="small_img" src="<%= product.product_image %>" alt="<%= product.product_title %>">
+                </a>
+                <p>Click to see more</p>
+            </section>
+            <% }) %>
+            
+        </main>
+    </div>
+</body>
+
+</html>

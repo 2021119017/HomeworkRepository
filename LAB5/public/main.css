@@ -1,0 +1,287 @@
+html {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+
+
+.main_title {
+    font-size: 35px;
+    position: relative;
+    animation-name: movingTitle;
+    animation-duration: 2s;
+}
+
+
+nav > a {
+    text-decoration: none;
+    margin: 5px 5px;
+}
+
+.nav_menu {
+    width: 102px;
+    position: fixed;
+    line-height: 2px;
+}
+.menu_explain {
+    font-size: small;
+}
+
+
+.red-underline {
+    text-decoration: overline underline;
+    text-decoration-color: rgb(217, 131, 146);
+}
+
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.item_part {
+    margin-left: 160px;
+    text-align: start;
+}
+
+.item_border {
+    display: flex;
+    border: 1px solid black;
+    padding: 25px;
+    margin: 10px;
+}
+
+.container {
+    position: relative;
+}
+
+.textbox {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+    background-color: black;
+}
+
+.text {
+    font-size: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    transition: transform 2s;
+}
+.container:hover {
+    transform: scale(2, 2);
+}
+
+/* signup */
+.title {
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+header > a, header > p {
+    color: black;
+    text-decoration: none;
+    display: inline;
+}
+
+.border-set {
+    border: 2px solid black
+}
+
+label {
+    display: block;
+}
+
+/* login */
+.red-btn {
+    background-color: #e85f32;
+    padding: 6px 35px;
+    height: 50px;
+    width: 20%;
+}
+
+.blue-btn {
+    background-color: #9ecccd;
+    padding: 6px 35px;
+    height: 50px;
+    width: 20%;
+
+}
+
+/* block css */
+aside, main {
+    padding: 15px;
+}
+
+body > div {
+    display: flex;
+}
+
+aside {
+    flex: 3;
+}
+
+main {
+    flex: 7;
+}
+
+
+/* form css */
+aside {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+}
+
+aside div {
+    margin-bottom: 20px;
+}
+
+label, select, input {
+    display: block;
+}
+
+
+label {
+    margin-bottom: 5px;
+}
+
+select, #searchTerm, button {
+    width: 100%;
+}
+
+#searchTerm {
+    padding: 5px;
+    width: 201.5px
+}
+
+button {
+    padding: 5px 0;
+}
+
+/* styling */
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+section {
+    width: 45%;
+    margin: 5px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.small_img {
+    width: 270px;
+    height: 270px;
+}
+.detail_img {
+    width: 100%;
+    height: 60%;
+}
+
+.click_info { 
+    font-size: small;
+    color: black;
+}
+
+
+/* 미디어 적용 1 */
+@media (max-width: 480px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .four_borders {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+table, tr, td, th {
+    margin-top: 10px;
+    border: solid 1px black;
+}
+.review_input {
+    width: 98%;
+    padding: 5px 0;
+}
+.review_button {
+    padding: 5px 2px;
+}
+
+/* 미디어 적용 2 */
+@media (min-width: 481px) and (max-width: 800px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    .four_borders {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item_border {
+        width: 37%
+    }
+}
+
+/* 미디어 적용 3 */
+@media (min-width: 801px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    
+    .four_borders {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .item_border {
+        width: 22%
+    }
+    .intro_content {
+        column-count: 2;
+        column-gap: 30px;
+        column-rule: 1px outset black;
+    }
+    }

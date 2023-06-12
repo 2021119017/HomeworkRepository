@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.product_title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+
+<body>
+    <h1 class="title">!~! Welcome to WISH Market !~!</h1>
+    <nav>
+        <a href="/">메인페이지</a>
+        <a href="/login"  >로그인</a>
+        <a href="/signup">회원가입</a>
+    </nav>
+    <hr>
+    <br>
+    <h3>디테일 페이지</h3>
+    <hr>
+    <div>
+        <aside>
+            <img class="detail_img" src="<%= product.product_image %>" alt="<%= product.product_title %>">
+        </aside>
+        <aside>
+            <p>product_id: <%= product.product_id %></p>
+            <p>product_image: <%= product.product_image %></p>
+            <p>product_title: <%= product.product_title %></p>
+            <p>product_price: <%= product.product_price %></p>
+            <p>prodct_category: <%= product.product_category %></p>
+        </aside>
+        <aside>
+            <p>아래에 리뷰를 작성해주세요:</p>
+            <form action="/write-reviews" method="POST">
+                <input type="hidden" name="product_id" value="<%= product.product_id %>">
+                <input class="review_input" type="text" name="content" />
+                <button class="review_button" type="submit">Submit</button>
+            </form>
+            <table>
+                <head>
+                    <th>
+                        feedback
+                    </th>
+                </head>
+                <% comments.reverse().forEach(function(comment) { %>
+                    <tr>
+                      <td><%= comment.content %></td>
+                    </tr>
+                  <% }); %>
+            </table>
+        </aside>
+    </div>
+</body>
+
+</html>
